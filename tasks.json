@@ -6,14 +6,17 @@
           "type": "shell",
           "command": "gcc",
           "args": [
-              "rumimaze_game.c",
+              "-finput-charset=UTF-8",  // UTF-8エンコーディング対応
+              "-g",                     // デバッグ情報を含める
+              "rumimaze_game.c",        // ソースファイル
               "-o",
-              "rumimaze_game"
+              "rumimaze_game"           // 出力バイナリ
           ],
           "group": {
               "kind": "build",
               "isDefault": true
-          }
+          },
+          "problemMatcher": ["$gcc"]
       }
   ]
 }
